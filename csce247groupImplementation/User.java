@@ -15,6 +15,7 @@ public class User {
 	private ArrayList<Ticket> ownedTickets;
 	private PaymentInfo paymentInfo;
 	private int rewardPoints;
+	private UserType type;
 	
 	// Getters
 	public String getName() {
@@ -51,6 +52,10 @@ public class User {
 	
 	public int getRewardPoints() {
 		return this.rewardPoints;
+	}
+	
+	public UserType getType() {
+		return this.type;
 	}
 	
 	// Setters
