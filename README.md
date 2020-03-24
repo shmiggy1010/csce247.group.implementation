@@ -1,1 +1,1 @@
-"# csce247.group.implementation" 
+# csce247.group.implementation 
