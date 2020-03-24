@@ -1,5 +1,5 @@
 package csce247groupImplementation;
 
 public enum UserType {
-	CHILD, MILITARY, GUEST, TEACHER, STUDENT, REGULAR
+	GUEST, REGULAR, CHILD, MILITARY, TEACHER, SENIOR
 }
