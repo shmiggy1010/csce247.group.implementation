@@ -1,3 +1,4 @@
+package csce247groupImplementation;
 
 public class Review {
 	public String title;
