@@ -100,8 +100,28 @@ public class User {
 	}
 	
 	// Methods
-	public void purchaseTickets(Ticket ticket) {
+	/**
+	 * 
+	 * @param ticket
+	 */
+	public void purchaseTicket(Ticket ticket) {
 		ownedTickets.add(ticket);
+	}
+	
+	/**
+	 * 
+	 * @param ticket
+	 */
+	public void refundTicket(Ticket ticket) {
+		ownedTickets.remove(ticket);
+	}
+	
+	public void reviewMovie(Event event) {
+		
+	}
+	
+	public void rateVenue(Ticket ticket) {
+		
 	}
 	
 }
