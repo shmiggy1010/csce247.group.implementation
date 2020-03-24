@@ -95,6 +95,8 @@ public class User {
 		this.rewardPoints = rewardPoints;
 	}
 	
-	
+	public void setType(UserType type) {
+		this.type = type;
+	}
 	
 }
