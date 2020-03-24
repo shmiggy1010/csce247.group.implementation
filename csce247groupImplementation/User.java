@@ -84,7 +84,7 @@ public class User {
 	}
 
 	public void setOwnedTickets(ArrayList<Ticket> ownedTickets) {
-		this.ownedTickets = ownedTickets;
+		ownedTickets = new ArrayList<Ticket>();;
 	}
 
 	public void setPaymentInfo(PaymentInfo paymentInfo) {
@@ -97,6 +97,11 @@ public class User {
 	
 	public void setType(UserType type) {
 		this.type = type;
+	}
+	
+	// Methods
+	public void purchaseTickets(Ticket ticket) {
+		ownedTickets.add(ticket);
 	}
 	
 }
