@@ -4,17 +4,25 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
-public class Event {
+public abstract class Event {
 	public String genre;
 	public String name;
 	public Double cost;
 	public LocalDate date;
 	public LocalTime time;
 	public int runTime; //runtime in minutes
-	public ArrayList<Integer> ratings;
 	public ArrayList<Review> reviews;
 	public boolean[][] seats;
 	public boolean[][] handicapSeats;
+	
+	/**
+	 * Changes status of a ticket to checked in
+	 * 
+	 * @param A ticket (that hasn't been check in yet)
+	 */
+	public void CheckIn(Ticket ticket) {
+		ticket.checkedInStatus = true;
+	}
 	
 	/**
 	 * Average rating generates an average out of 5 from all ratings
@@ -23,10 +31,10 @@ public class Event {
 	 */
 	public double AverageRating() {
 		double sum = 0;
-		for(int i = 0; i < ratings.size(); i++) {
-			sum += ratings.get(i);
+		for(int i = 0; i < reviews.size(); i++) {
+			sum += reviews.get(i).rating;
 		}
-		return sum/ratings.size();
+		return sum/reviews.size();
 	}
 	
 	public String toString() {
